@@ -253,17 +253,12 @@ def decrypt(D,K):
         temp=temp+x
     return temp
 def Encryption():
-    #data=input("Enter a message for encryption: ")
-    #A=input("Enter the KEY : ")
-    data="SOLVETHISPROBLEM"
-    A="RULE"
+    data=input("Enter a message for encryption: ")
+    A=input("Enter the KEY : ")
     print("The encrypted message is:\n"+encrypt(data,A))
-    #encrypt(data,A)
 def Decryption():
-    #data=input("Enter a message for decryption: ")
-    #A=input("Enter the KEY : ")
-    data="TPRXASIKTQBVDRFS"
-    A="RULE"
+    data=input("Enter a message for decryption: ")
+    A=input("Enter the KEY : ")
     print("The decrypted message is:\n"+decrypt(data,A))
 print("Made by group # 4\nNoman Ahmed 42\nTalha Hussain 51")
 key=input("Press 1 for Encrypther and any other key for decryption : ")
