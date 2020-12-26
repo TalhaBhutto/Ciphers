@@ -128,5 +128,5 @@ def encrypt(D,K):
     return temp
 data="PLAYFAIRISCOMPLETELYDIFFERENTWAYTOENCRYPTTHEMESSAGE"
 A="SUCCESS"
-print("Made by group # 4\nNoman Ahmed 42\nTalha Hussain 51")
+print("Made by Talha Hussain Bhutto")
 print("The encrypted message is:\n"+encrypt(data,A))
