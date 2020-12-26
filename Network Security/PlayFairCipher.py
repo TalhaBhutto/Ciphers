@@ -271,6 +271,7 @@ def Encryption():
 def Decryption():
     data=input("Enter a message for decryption: ")
     A=input("Enter the KEY : ")
+    D=""
     cond=True
     for x in data:
         if(x>="a" and x<="z"):
