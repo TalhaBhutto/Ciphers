@@ -1,4 +1,14 @@
 #Made BY Talha HUssain BHutto
+def Caps(data):
+    D=""
+    cond=True
+    for x in data:
+        if(x>="a" and x<="z"):
+            x=chr(ord(x)-32)
+        elif(x>"z" or x<"A" or (x>"Z" and x<"a")):
+            cond=False
+        D=D+x
+    return D
 def encrypt(D,K):
     k2=""
     num=0
@@ -256,34 +266,12 @@ def decrypt(D,K):
 def Encryption():
     data=input("Enter a message for encryption: ")
     A=input("Enter the KEY : ")
-    D=""
-    cond=True
-    for x in data:
-        if(x>="a" and x<="z"):
-            x=chr(ord(x)-32)
-        elif(x>"z" or x<"A" or (x>"Z" and x<"a")):
-            cond=False
-        D=D+x
-    if(cond):    
-        print("The encrypted message is:\n"+encrypt(D,A))
-    else:
-        print("Invalid Input!!\nEnter alphabets only....")
+    print("The encrypted message is:\n"+encrypt(Caps(data),Caps(A)))
 def Decryption():
     data=input("Enter a message for decryption: ")
     A=input("Enter the KEY : ")
-    D=""
-    cond=True
-    for x in data:
-        if(x>="a" and x<="z"):
-            x=chr(ord(x)-32)
-        elif(x>"z" or x<"A" or (x>"Z" and x<a)):
-            cond=False
-        D=D+x
-    if(cond):    
-        print("The encrypted message is:\n"+decrypt(D,A))
-    else:
-        print("Invalid Input!!\nEnter alphabets only....")
-print("Made by Talha Hussain Bhutto")
+    print("The encrypted message is:\n"+decrypt(Caps(data),Caps(A)))
+    print("Made by Talha Hussain Bhutto")
 key=input("Press 1 for Encrypther and any other key for decryption : ")
 temp=""
 if(key=="1"):
