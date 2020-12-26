@@ -265,7 +265,7 @@ def Encryption():
             cond=False
         D=D+x
     if(cond):    
-        print("The encrypted message is:\n"+encrypt(data,A))
+        print("The encrypted message is:\n"+encrypt(D,A))
     else:
         print("Invalid Input!!\nEnter alphabets only....")
 def Decryption():
@@ -280,7 +280,7 @@ def Decryption():
             cond=False
         D=D+x
     if(cond):    
-        print("The encrypted message is:\n"+decrypt(data,A))
+        print("The encrypted message is:\n"+decrypt(D,A))
     else:
         print("Invalid Input!!\nEnter alphabets only....")
 print("Made by Talha Hussain Bhutto")
