@@ -255,11 +255,32 @@ def decrypt(D,K):
 def Encryption():
     data=input("Enter a message for encryption: ")
     A=input("Enter the KEY : ")
-    print("The encrypted message is:\n"+encrypt(data,A))
+    D=""
+    cond=True
+    for x in data:
+        if(x>="a" and x<="z"):
+            x=char(ord(x)-32)
+        elif(x>"z" or x<"A" or (x>"Z" and x<a)):
+            cond=False
+        D=D+x
+    if(cond):    
+        print("The encrypted message is:\n"+encrypt(data,A))
+    else:
+        print("Invalid Input!!\nEnter alphabets only....")
 def Decryption():
     data=input("Enter a message for decryption: ")
     A=input("Enter the KEY : ")
-    print("The decrypted message is:\n"+decrypt(data,A))
+    cond=True
+    for x in data:
+        if(x>="a" and x<="z"):
+            x=char(ord(x)-32)
+        elif(x>"z" or x<"A" or (x>"Z" and x<a)):
+            cond=False
+        D=D+x
+    if(cond):    
+        print("The encrypted message is:\n"+decrypt(data,A))
+    else:
+        print("Invalid Input!!\nEnter alphabets only....")
 print("Made by group # 4\nNoman Ahmed 42\nTalha Hussain 51")
 key=input("Press 1 for Encrypther and any other key for decryption : ")
 temp=""
