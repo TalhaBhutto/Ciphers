@@ -1,3 +1,4 @@
+#Made BY Talha HUssain BHutto
 def encrypt(D,K):
     k2=""
     num=0
@@ -259,7 +260,7 @@ def Encryption():
     cond=True
     for x in data:
         if(x>="a" and x<="z"):
-            x=char(ord(x)-32)
+            x=chr(ord(x)-32)
         elif(x>"z" or x<"A" or (x>"Z" and x<a)):
             cond=False
         D=D+x
@@ -273,7 +274,7 @@ def Decryption():
     cond=True
     for x in data:
         if(x>="a" and x<="z"):
-            x=char(ord(x)-32)
+            x=chr(ord(x)-32)
         elif(x>"z" or x<"A" or (x>"Z" and x<a)):
             cond=False
         D=D+x
