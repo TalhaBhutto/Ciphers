@@ -1,5 +1,7 @@
 #Made By Talha Hussain  Bhutto B17158051
 def encrypt(data,key):
+    if(len(key)!=4):
+        return "lenght of key must be of 4 letters"
     d=data
     data=""
     for x in d:
@@ -21,10 +23,32 @@ def encrypt(data,key):
             a=ord(data[l1*2])-65
             b=ord(data[l1*2+1])-65
         else:
-            return "Plese enter a character from A-Z or a-z"
+            return "Plese enter characters from A-Z or a-z"
         temp.append([a,b])
         l1+=1
-    return temp   
+    temp2=[]
+    for x in key:
+        if(x<="Z" or x>="A"):
+            temp2.append(ord(x)-65)
+        elif(x<="z" or x>="a"):
+            temp2.append(ord(x)-32)
+        else:
+            return "key can only contain alphabets"
+    det=0
+    det=temp2[0]*temp2[3]-temp2[1]*temp2[2]
+    if(det==0):
+        return "Inverse not possible!!"
+    else:
+        det=26-(det%26)
+    a=temp2[0]
+    temp2[0]=(temp2[3]*det)%26
+    temp2[3]=(a*det)%26
+    temp2[1]=26-(temp2[1]*det)%26
+    temp2[2]=26-(temp2[2]*det)%26
+    l1=0
+    l2=0
+    #while(l1<len(temp)):
+    return temp2   
 def decrypt(a,b):
     a+b
 def Encryption():
