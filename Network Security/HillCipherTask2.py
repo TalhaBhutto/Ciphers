@@ -64,4 +64,4 @@ def encrypt(data,key):
         data=data+chr(x[0]+65)+chr(x[1]+65)
     return data
 print("Made by group # 4\nNoman Ahmed 42\nTalha Hussain 51")
-print("The Entrypted text is "+encrypt("You will be rewarded","HILL"))
+print("The Entrypted text is "+encrypt("Next is final paper","HILL"))

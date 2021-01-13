@@ -14,6 +14,7 @@ def Key(key,data):
         inc+=1
     return temp
 def encryption2(data,A):
+    b=0
     temp=""
     inc=0
     y=Key(A,data)
